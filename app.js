@@ -14,29 +14,35 @@ function convert(letter) {
 	if (letter === "s") return "Scissor";
 }
 
-
 function win(userChoice, computerChoice) {
+	const userChoice_div = document.getElementById(userChoice);
 	userScore++;
 	userScore_span.innerHTML = userScore;
 	computerScore_span.innerHTML = computerScore;
 	result_p.innerHTML = `${convert(userChoice)} beats ${convert(computerChoice)}. You win!`;
+	userChoice_div.classList.add('green-glow');
+	setTimeout(() => userChoice_div.classList.remove('green-glow'), 500);
 }
 
 function lose(userChoice, computerChoice) {
+	const userChoice_div = document.getElementById(userChoice);
 	computerScore++;
 	userScore_span.innerHTML = userScore;
 	computerScore_span.innerHTML = computerScore;
 	result_p.innerHTML = `${convert(userChoice)} beats ${convert(computerChoice)}. You Lost!`;
-
+	userChoice_div.classList.add('red-glow');
+	setTimeout(() => userChoice_div.classList.remove('red-glow'), 500);
 }
 
 function draw(userChoice, computerChoice) {
+	const userChoice_div = document.getElementById(userChoice);
 	result_p.innerHTML = `${convert(userChoice)} and ${convert(computerChoice)}. It's a draw!`;
+	userChoice_div.classList.add('grey-glow');
+	setTimeout(() => userChoice_div.classList.remove('grey-glow'), 500);
 }
 
-
 function getComputerChoice() {
-	const choices = ['r', 'p', 's'];
+	const choices = ["r", "p", "s"];
 	const randomNumber = (Math.floor(Math.random() * 3));
 	return choices[randomNumber];
 }
@@ -63,17 +69,9 @@ function game(userChoice) {
 }
 
 function main() {
-	rock_div.addEventListener('click', function () {
-	game("r");
-	})
-
-	paper_div.addEventListener('click', function () {
-	game("p")
-	})
-
-	scissor_div.addEventListener('click', function () {
-	game("s")
-	})
+	rock_div.addEventListener('click', () => game("r"));
+	paper_div.addEventListener('click', () => game("p"));
+	scissor_div.addEventListener('click', () =>	game("s"));
 }
 
 main();

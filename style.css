@@ -67,19 +67,21 @@ header > h1 {
 
 .choices {
 	text-align: center;
-	margin-top: 50px;
+	margin: 50px 0;
 }
 
 .choice {
 	display: inline-block;
-	padding: 10px;
+	padding: 2px;
 	margin: 0 20px;
+	border:  4px white solid;
+	border-radius: 50%;
 }
 
 .choice:hover {
 	cursor: pointer;
 	opacity: 0.5;
-	transition: all 0.5s ease;
+	transition: all 0.3s ease;
 }
 
 .choice:active {
@@ -93,4 +95,19 @@ header > h1 {
 	font-weight: bold;
 	font-size: 20px;
 	margin: 20px;
+}
+
+.green-glow {
+	border: 4px solid #4DCC7D;
+	box-shadow: 0 0 10px #31B43A;
+}
+
+.red-glow {
+	border: 4px solid #fc121b;
+	box-shadow: 0 0 10px #d01115;
+}
+
+.grey-glow {
+	border: 4px solid yellow;
+	box-shadow: 0 0 10px #25292b;
 }
