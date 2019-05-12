@@ -60,7 +60,7 @@ header > h1 {
 .result {
 	font-size: 60px;
 	color: white;
-	margin: 30px auto;
+	margin: 15% auto;
 
 }
 
@@ -78,7 +78,7 @@ header > h1 {
 .choice {
 	display: inline-block;
 	padding: 10px;
-	margin: 0 20px;
+	margin: 5% 20px;
 	border:  4px white solid;
 	border-radius: 50%;
 }
@@ -104,13 +104,13 @@ header > h1 {
 
 .top-part {
 	text-align: center;
+	margin: 10% auto;
 }
 
 .danielinline {
 	display: inline-block;
 	vertical-align: middle;
-	text-align: center;
-}
+	text-align: center;}
 
 .choicestart {
 	display: inline-block;
