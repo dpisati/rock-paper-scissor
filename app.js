@@ -16,29 +16,47 @@ function convert(letter) {
 
 function win(userChoice, computerChoice) {
 	const userChoice_div = document.getElementById(userChoice);
+	const userStart_id = document.getElementById('user-start');
+	const compStart_id = document.getElementById('comp-start');
 	userScore++;
 	userScore_span.innerHTML = userScore;
 	computerScore_span.innerHTML = computerScore;
-	result_p.innerHTML = `${convert(userChoice)} beats ${convert(computerChoice)}. You win!`;
+	result_p.innerHTML = `You win!`;
 	userChoice_div.classList.add('green-glow');
-	setTimeout(() => userChoice_div.classList.remove('green-glow'), 500);
+	userStart_id.classList.add('green-glow');
+	compStart_id.classList.add('red-glow');
+	setTimeout(() => userChoice_div.classList.remove('green-glow'), 700);
+	setTimeout(() => userStart_id.classList.remove('green-glow'), 700);
+	setTimeout(() => compStart_id.classList.remove('red-glow'), 700);
 }
 
 function lose(userChoice, computerChoice) {
 	const userChoice_div = document.getElementById(userChoice);
+	const userStart_id = document.getElementById('user-start');
+	const compStart_id = document.getElementById('comp-start');
 	computerScore++;
 	userScore_span.innerHTML = userScore;
 	computerScore_span.innerHTML = computerScore;
-	result_p.innerHTML = `${convert(userChoice)} beats ${convert(computerChoice)}. You Lost!`;
+	result_p.innerHTML = `You Lost!`;
 	userChoice_div.classList.add('red-glow');
-	setTimeout(() => userChoice_div.classList.remove('red-glow'), 500);
+	userStart_id.classList.add('red-glow');
+	compStart_id.classList.add('green-glow');
+	setTimeout(() => userChoice_div.classList.remove('red-glow'), 700);
+	setTimeout(() => userStart_id.classList.remove('red-glow'), 700);
+	setTimeout(() => compStart_id.classList.remove('green-glow'), 700);
 }
 
 function draw(userChoice, computerChoice) {
 	const userChoice_div = document.getElementById(userChoice);
-	result_p.innerHTML = `${convert(userChoice)} and ${convert(computerChoice)}. It's a draw!`;
+	const userStart_id = document.getElementById('user-start');
+	const compStart_id = document.getElementById('comp-start');
+	result_p.innerHTML = `Its a draw!`;
 	userChoice_div.classList.add('grey-glow');
-	setTimeout(() => userChoice_div.classList.remove('grey-glow'), 500);
+	userStart_id.classList.add('grey-glow');
+	compStart_id.classList.add('grey-glow');
+	setTimeout(() => userChoice_div.classList.remove('grey-glow'), 700);
+	setTimeout(() => userStart_id.classList.remove('grey-glow'), 700);
+	setTimeout(() => compStart_id.classList.remove('grey-glow'), 700);
 }
 
 function getComputerChoice() {
@@ -49,6 +67,8 @@ function getComputerChoice() {
 
 function game(userChoice) {
 	const computerChoice = getComputerChoice();
+	getImage(userChoice);
+	getCompImage(computerChoice);
 	switch (userChoice + computerChoice) {
 		case "rs":
 		case "pr":
@@ -73,7 +93,38 @@ function main() {
 	paper_div.addEventListener('click', () => game("p"));
 	scissor_div.addEventListener('click', () =>	game("s"));
 }
-
 main();
 
+function getImage(userChoice) {
+	var z = document.getElementById('user-start').getElementsByTagName("img")[0];
+	if (userChoice === 'r') {
+		z.src = 'images/rock.png';
+		z.setAttribute("width", "220");
+		z.setAttribute("height", "220");
+	} if (userChoice === 'p'){
+		z.src = 'images/paper.png';
+		z.setAttribute("width", "220");
+		z.setAttribute("height", "220");
+	} if (userChoice === 's'){
+		z.src = 'images/scissor.png';
+		z.setAttribute("width", "220");
+		z.setAttribute("height", "220");
+	}
+}
 
+function getCompImage(computerChoice) {
+	var x = document.getElementById('comp-start').getElementsByTagName("img")[0];
+	if (computerChoice === 'r') {
+		x.src = 'images/rock.png';
+		x.setAttribute("width", "220");
+		x.setAttribute("height", "220");
+	} if (computerChoice === 'p'){
+		x.src = 'images/paper.png';
+		x.setAttribute("width", "220");
+		x.setAttribute("height", "220");
+	} if (computerChoice === 's'){
+		x.src = 'images/scissor.png';
+		x.setAttribute("width", "220");
+		x.setAttribute("height", "220");
+	}
+}
