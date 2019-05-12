@@ -99,16 +99,16 @@ function getImage(userChoice) {
 	var z = document.getElementById('user-start').getElementsByTagName("img")[0];
 	if (userChoice === 'r') {
 		z.src = 'images/rock.png';
-		z.setAttribute("width", "220");
-		z.setAttribute("height", "220");
+		z.setAttribute("width", "180");
+		z.setAttribute("height", "180");
 	} if (userChoice === 'p'){
 		z.src = 'images/paper.png';
-		z.setAttribute("width", "220");
-		z.setAttribute("height", "220");
+		z.setAttribute("width", "180");
+		z.setAttribute("height", "180");
 	} if (userChoice === 's'){
 		z.src = 'images/scissor.png';
-		z.setAttribute("width", "220");
-		z.setAttribute("height", "220");
+		z.setAttribute("width", "180");
+		z.setAttribute("height", "180");
 	}
 }
 
@@ -116,15 +116,15 @@ function getCompImage(computerChoice) {
 	var x = document.getElementById('comp-start').getElementsByTagName("img")[0];
 	if (computerChoice === 'r') {
 		x.src = 'images/rock.png';
-		x.setAttribute("width", "220");
-		x.setAttribute("height", "220");
+		x.setAttribute("width", "180");
+		x.setAttribute("height", "180");
 	} if (computerChoice === 'p'){
 		x.src = 'images/paper.png';
-		x.setAttribute("width", "220");
-		x.setAttribute("height", "220");
+		x.setAttribute("width", "180");
+		x.setAttribute("height", "180");
 	} if (computerChoice === 's'){
 		x.src = 'images/scissor.png';
-		x.setAttribute("width", "220");
-		x.setAttribute("height", "220");
+		x.setAttribute("width", "180");
+		x.setAttribute("height", "180");
 	}
 }
