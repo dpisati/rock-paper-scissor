@@ -40,7 +40,7 @@ img {
 }
 
 .badge-user {
-  background: #f7cc69;
+  background: rgb(247, 204, 105);
   color: black;
   font-size: 40px;
   padding: 2px 20px;
@@ -48,7 +48,7 @@ img {
   border-radius: 15px;
 }
 .badge-comp {
-  background: #fca582;
+  background: rgb(252, 165, 130);
   color: black;
   font-size: 40px;
   padding: 2px 20px;
