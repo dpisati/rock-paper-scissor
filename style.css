@@ -39,9 +39,17 @@ img {
   text-align: center;
 }
 
-.badge {
-  background: #e2584d;
-  color: white;
+.badge-user {
+  background: #f7cc69;
+  color: black;
+  font-size: 40px;
+  padding: 2px 20px;
+  font-family: Asap, sans-serif;
+  border-radius: 15px;
+}
+.badge-comp {
+  background: #fca582;
+  color: black;
   font-size: 40px;
   padding: 2px 20px;
   font-family: Asap, sans-serif;
