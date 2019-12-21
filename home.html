@@ -8,27 +8,38 @@
     <header>
       <h1>Rock Paper Scissors</h1>
     </header>
-    <div class="container">
-      <div class="choices">
-        <div class="choice" id="r">
-          <img class="choiceimg" src="images/rock.png" />
-        </div>
-        <div class="choice" id="p">
-          <img class="choiceimg" src="images/paper.png" />
-        </div>
-        <div class="choice" id="s">
-          <img class="choiceimg" src="images/scissor.png" />
+    <div class="choices">
+      <div class="choice" id="r">
+        <img src="images/rock.png" width="200" height="200" />
+      </div>
+      <div class="choice" id="p">
+        <img src="images/paper.png" width="200" height="200" />
+      </div>
+      <div class="choice" id="s">
+        <img src="images/scissor.png" width="200" height="200" />
+      </div>
+    </div>
+    <div class="result">
+      <p class="yourmove">Make your move!</p>
+    </div>
+    <div class="top-part">
+      <div class="danielinline">
+        <div class="choicestart" id="user-start">
+          <img class="startimage" src="" />
         </div>
       </div>
-      <ul>
-        <li>Rock wins over Scissors</li>
-        <li>Scissors wins over Paper</li>
-        <li>Paper wins over Rock</li>
-      </ul>
+      <div class="score-board danielinline">
+        <dir class="badge" id="user-label">user</dir>
+        <dir class="badge" id="computer-label">comp</dir>
+        <span id="user-score">0</span> ; <span id="computer-score">0</span>
+      </div>
+      <div class="danielinline">
+        <div class="choicestart" id="comp-start">
+          <img class="startimage" src="" />
+        </div>
+      </div>
     </div>
-
-    <div class="mainbutton"><a href="./index.html">Play Now!</a></div>
-
+    <div class="mainbutton"><a href="./index.html">Back to Home</a></div>
     <script src="app.js"></script>
   </body>
 </html>
